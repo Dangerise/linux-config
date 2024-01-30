@@ -1,0 +1,50 @@
+theme="nord"
+
+# mouse=true
+
+[editor]
+line-number="relative"
+mouse=true
+cursorline=true # 光标所在行高亮
+cursorcolumn=false # 光标所在列高亮
+bufferline="always"
+completion-trigger-len=1
+auto-format=true
+
+[editor.lsp]
+display-messages=true
+display-inlay-hints=true
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert="bar"
+normal="block"
+select="underline"
+
+[keys.normal]
+C-s=":w"
+# C-A-a=":format"
+"esc" = ["collapse_selection", ":w"]
+
+[keys.insert]
+C-s=":w"
+"esc" = ["normal_mode", ":w"]
+# C-S-a=":format"
+
+[keys.select]
+C-s=":w"
+# C-S-a=":format"
+"esc" = ["collapse_selection", "normal_mode", ":w"]
+
+# "esc" = ["collapse_selection", "normal_mode", ":w"]
+
+# [keys.insert]
+# "esc" = ["normal_mode", ":w"]

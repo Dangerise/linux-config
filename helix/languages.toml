@@ -1,0 +1,6 @@
+# [[language]]
+
+[language-server.rust-analyzer.config]
+completion.autoimport.enable=false
+
+# completion.autoimport.enable
