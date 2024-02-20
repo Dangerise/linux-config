@@ -1,33 +1,28 @@
 [[language]]
 name = "markdown"
-# formatter = { command = "dprint", args = ["fmt"] }
 soft-wrap.enable = true
 
 [[language]]
 name = "toml"
-auto-format = true
 
 [[language]]
 name = "javascript"
 indent = { tab-width = 4, unit = "    " }
-auto-format = true
-
 
 [[language]]
 name = "typescript"
 indent = { tab-width = 4, unit = "    " }
-auto-format = true
 
 [[language]]
 name = "lua"
 indent = { tab-width = 4, unit = "    " }
-auto-format = true
-
 
 [[language]]
 name = "cpp"
 indent = { tab-width = 4, unit = "    " }
-auto-format = true
+formatter = { command = "clang-format", args = [
+  "-style=file:/home/dangerise/.config/clang-format/.clang-format",
+] }
 
 [language-server.rust-analyzer.config]
 completion.autoimport.enable = false
