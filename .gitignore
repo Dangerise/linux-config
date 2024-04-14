@@ -3,6 +3,11 @@
 !/helix
 !/zellij
 !/clang-format
+!/wezterm
+!/i3
+!/i3status
+!/i3block
+!/scripts
 
 !github-token
 !.gitignore

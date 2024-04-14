@@ -1,6 +1,4 @@
-theme = "zed_onedark"
-
-# mouse=true
+theme = "boo_berry"
 
 [editor]
 line-number = "relative"
@@ -9,6 +7,7 @@ cursorline = true          # 光标所在行高亮
 cursorcolumn = false       # 光标所在列高亮
 bufferline = "always"
 completion-trigger-len = 1
+auto-save = true
 
 [editor.lsp]
 display-messages = true
@@ -29,6 +28,9 @@ separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
+
+[editor.file-picker]
+hidden = false
 
 [editor.cursor-shape]
 insert = "bar"
