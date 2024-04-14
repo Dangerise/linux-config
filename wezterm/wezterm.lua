@@ -4,6 +4,8 @@ local config = wezterm.config_builder()
 
 config.default_prog = { "/usr/bin/fish" }
 
+config.font = wezterm.font("JetBrains Mono", { font_size = 10 })
+
 config.keys = {
     { -- 控制左右移动面板
         key = 'h',
