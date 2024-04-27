@@ -9,6 +9,7 @@
 !/i3block
 !/scripts
 !/.cargo
+!environment
 
 !github-token
 !.gitignore
