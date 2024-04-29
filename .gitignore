@@ -11,7 +11,8 @@
 !/scripts
 !/.cargo
 !environment
-
+!qq-email-code
+!install.sh1
 !github-token
 !.gitignore
 !.profile
