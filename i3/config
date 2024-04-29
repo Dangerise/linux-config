@@ -398,11 +398,11 @@ smart_borders on
 title_align center
 
 exec microsoft-edge-stable
-exec nautilus
+exec thunar
 exec linuxqq
 exec thunderbird
 
 assign [class="Microsoft-edge"] $ws2
-assign [class="org.gnome.Nautilus"] $ws3
+assign [class="Thunar"] $ws3
 assign [class="QQ"] $ws4
 assign [class="thunderbird"] $ws5

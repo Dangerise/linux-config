@@ -14,5 +14,6 @@
 
 !github-token
 !.gitignore
+!.profile
 
 !/i3blocks
