@@ -3,6 +3,8 @@ exec_always feh --bg-fill ~/background.jpg
 exec_always picom -f 
 exec --no-startup-id fcitx5
 
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 set $mod Mod4
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -17,6 +19,8 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+bindsym Print exec spectacle
 
 # workspace number $ws1
 # exec wezterm
@@ -346,29 +350,29 @@ bindsym $mod+r mode "resize"
 
 
 # 窗口的色彩方案
-set $bgcolor    #97788999
-set $in-bgcolor #4778899D
+set $bgcolor    #A2B5CDDD
+set $in-bgcolor #63B8FF9D
 set $text       #ffffff
 set $u-bgcolor  #ff0000
-set $indicator  #a8a3c1
+set $indicator  #ffffff
 set $in-text    #969696
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango: Droid Sans Mono 10
-        status_command i3blocks -c /home/$USER/.config/i3blocks/i3blocks.conf
-        i3bar_command i3bar --transparency
-        colors {
-                background $bgcolor
-                separator #191919
-                #                       border          background      text
-                focused_workspace       $bgcolor        $bgcolor        $text
-                inactive_workspace      $in-bgcolor     $in-bgcolor     $text
-                urgent_workspace        $u-bgcolor      $u-bgcolor      $text   
-
-        }
-}
+         font pango: Droid Sans Mono 10
+         status_command i3blocks 
+         i3bar_command i3bar --transparency
+         colors {
+                 background $bgcolor
+                 separator #191919
+                 #                       border          background      text
+                 focused_workspace       $in-bgcolor     $in-bgcolor     $text
+                 inactive_workspace      $bg-color       $bg-color       $text
+                 urgent_workspace        $u-bgcolor      $u-bgcolor      $text   
+ 
+         }
+ }
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
@@ -383,17 +387,22 @@ bar {
 exec i3-config-wizard
 
 #                       边框            背景            文本            指示器（显示下一个窗口位置的线条）     
-client.focused          $bgcolor        $bgcolor        $text           $indicator
-client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
+client.focused          $in-bgcolor     $in-bgcolor     $in-text        $indicator
+client.unfocused        $bgcolor        $bgcolor        $text           $bgcolor   
 client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
 client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor
 
+hide_edge_borders both
+default_border pixel 2
+smart_borders on
+title_align center
+
 exec microsoft-edge-stable
-exec thunar
+exec nautilus
 exec linuxqq
 exec thunderbird
 
 assign [class="Microsoft-edge"] $ws2
-assign [class="Thunar"] $ws3
+assign [class="org.gnome.Nautilus"] $ws3
 assign [class="QQ"] $ws4
 assign [class="thunderbird"] $ws5

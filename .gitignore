@@ -1,15 +1,18 @@
 /*
 
+!/utility
+!/linux-utility
 !/helix
 !/zellij
 !/clang-format
 !/wezterm
 !/i3
 !/i3status
-!/i3block
 !/scripts
 !/.cargo
 !environment
 
 !github-token
 !.gitignore
+
+!/i3blocks

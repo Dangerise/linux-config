@@ -1,0 +1,23 @@
+[arch-updates]
+command=/home/$USER/.config/i3blocks/arch-update/arch-update
+interval=600
+markup=pango
+label=  
+
+[restart]
+full_text=Restart
+command=i3-msg -q reboot
+color=#FFFF00
+
+[shutdown]
+full_text=Shutdown
+command=i3-msg -q shutdown
+color=#FF0000
+
+[hello]
+command=echo Hello, $USER
+interval=1
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1
